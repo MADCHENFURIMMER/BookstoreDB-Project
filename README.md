@@ -34,6 +34,8 @@ El sistema consta de **5 tablas principales** totalmente normalizadas que permit
 
 Diseño del DW BookstoreDW
 
+![Texto alternativo](image.png)
+
 Para simplificar el modelo estrella, he decidido eliminar las dimensiones dim_order_status y dim_shipping_method. De esta forma, el modelo se centra en el análisis de ventas por fecha, cliente, libro y dirección de envío, que son los ejes principales de negocio. Los estados de pedido y métodos de envío pueden añadirse como atributos en la tabla de hechos si son necesarios, pero no como dimensiones separadas para reducir complejidad.
 
 1. Descripción del Modelo Simplificado
