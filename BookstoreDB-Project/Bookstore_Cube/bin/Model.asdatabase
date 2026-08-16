@@ -1,0 +1,27 @@
+{
+  "name": "Bookstore_Cube",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "SqlServer DESKTOP-HDF43POIPOS2025 BookstoreDW",
+        "connectionString": "Provider=SQLNCLI11;Data Source=DESKTOP-HDF43PO\\IPOS2025;Initial Catalog=BookstoreDW;User ID=sa;Persist Security Info=true",
+        "impersonationMode": "impersonateAccount",
+        "account": "MariaPC",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  }
+}

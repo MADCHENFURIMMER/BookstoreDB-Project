@@ -1,0 +1,8 @@
+D:\UAGRM\Materia5\PROYECTO\git-madchen\BookstoreDB-Project\Bookstore_Cube\bin\Model.asdatabase
+D:\UAGRM\Materia5\PROYECTO\git-madchen\BookstoreDB-Project\Bookstore_Cube\bin\Model.deploymenttargets
+D:\UAGRM\Materia5\PROYECTO\git-madchen\BookstoreDB-Project\Bookstore_Cube\bin\Model.deploymentoptions
+D:\UAGRM\Materia5\PROYECTO\git-madchen\BookstoreDB-Project\Bookstore_Cube\obj\Development\Bookstore_Cube.smproj.AssemblyReference.cache
+D:\UAGRM\Materia5\PROYECTO\git-madchen\BookstoreDB-Project\Bookstore_Cube\obj\Development\Bookstore_Cube.smproj.CoreCompileInputs.cache
+D:\UAGRM\Materia5\PROYECTO\git-madchen\BookstoreDB-Project\Bookstore_Cube\obj\Development\Model.asdatabase
+D:\UAGRM\Materia5\PROYECTO\git-madchen\BookstoreDB-Project\Bookstore_Cube\obj\Development\Model.deploymentoptions
+D:\UAGRM\Materia5\PROYECTO\git-madchen\BookstoreDB-Project\Bookstore_Cube\obj\Development\Model.deploymenttargets
