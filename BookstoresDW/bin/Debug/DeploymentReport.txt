@@ -1,0 +1,32 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[dim_address] (Table)
+       [dbo].[dim_address].[uq_dim_address_address_id] (Index)
+       [dbo].[dim_book] (Table)
+       [dbo].[dim_book].[uq_dim_book_book_id] (Index)
+       [dbo].[dim_customer] (Table)
+       [dbo].[dim_customer].[uq_dim_customer_customer_id] (Index)
+       [dbo].[dim_date] (Table)
+       [dbo].[fact_sales] (Table)
+       [dbo].[fact_sales].[idx_fact_sales_order_date] (Index)
+       [dbo].[fact_sales].[idx_fact_sales_customer] (Index)
+       [dbo].[fact_sales].[idx_fact_sales_book] (Index)
+       [dbo].[fact_sales].[idx_fact_sales_address] (Index)
+       [dbo].[Table1] (Table)
+       [dbo].[df_fact_sales_quantity] (Default Constraint)
+       [dbo].[fk_fact_sales_dim_address] (Foreign Key)
+       [dbo].[fk_fact_sales_dim_book] (Foreign Key)
+       [dbo].[fk_fact_sales_dim_customer] (Foreign Key)
+       [dbo].[fk_fact_sales_dim_date] (Foreign Key)
+
+** Supporting actions

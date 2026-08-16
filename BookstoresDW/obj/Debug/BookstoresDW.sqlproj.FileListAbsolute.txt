@@ -1,0 +1,20 @@
+C:\Users\JORGE N\Documents\MAESTRIA\MODULO-4 DATA MANAGEMENT AND BUSINESS INTELLIGENCE\proyecto\BookstoresDW\bin\Debug\BookstoresDW.dacpac
+C:\Users\JORGE N\Documents\MAESTRIA\MODULO-4 DATA MANAGEMENT AND BUSINESS INTELLIGENCE\proyecto\BookstoresDW\bin\Debug\BookstoresDW.dll
+C:\Users\JORGE N\Documents\MAESTRIA\MODULO-4 DATA MANAGEMENT AND BUSINESS INTELLIGENCE\proyecto\BookstoresDW\bin\Debug\BookstoresDW.pdb
+C:\Users\JORGE N\Documents\MAESTRIA\MODULO-4 DATA MANAGEMENT AND BUSINESS INTELLIGENCE\proyecto\BookstoresDW\obj\Debug\BookstoresDW.sqlproj.AssemblyReference.cache
+C:\Users\JORGE N\Documents\MAESTRIA\MODULO-4 DATA MANAGEMENT AND BUSINESS INTELLIGENCE\proyecto\BookstoresDW\obj\Debug\Model.xml
+C:\Users\JORGE N\Documents\MAESTRIA\MODULO-4 DATA MANAGEMENT AND BUSINESS INTELLIGENCE\proyecto\BookstoresDW\obj\Debug\refactor.xml
+C:\Users\JORGE N\Documents\MAESTRIA\MODULO-4 DATA MANAGEMENT AND BUSINESS INTELLIGENCE\proyecto\BookstoresDW\obj\Debug\postdeploy.sql
+C:\Users\JORGE N\Documents\MAESTRIA\MODULO-4 DATA MANAGEMENT AND BUSINESS INTELLIGENCE\proyecto\BookstoresDW\obj\Debug\predeploy.sql
+C:\Users\JORGE N\Documents\MAESTRIA\MODULO-4 DATA MANAGEMENT AND BUSINESS INTELLIGENCE\proyecto\BookstoresDW\obj\Debug\BookstoresDW.dll
+C:\Users\JORGE N\Documents\MAESTRIA\MODULO-4 DATA MANAGEMENT AND BUSINESS INTELLIGENCE\proyecto\BookstoresDW\obj\Debug\BookstoresDW.pdb
+D:\UAGRM\Materia5\PROYECTO\git\BookstoresDW\bin\Debug\BookstoresDW.dacpac
+D:\UAGRM\Materia5\PROYECTO\git\BookstoresDW\bin\Debug\BookstoresDW.dll
+D:\UAGRM\Materia5\PROYECTO\git\BookstoresDW\bin\Debug\BookstoresDW.pdb
+D:\UAGRM\Materia5\PROYECTO\git\BookstoresDW\obj\Debug\BookstoresDW.sqlproj.AssemblyReference.cache
+D:\UAGRM\Materia5\PROYECTO\git\BookstoresDW\obj\Debug\Model.xml
+D:\UAGRM\Materia5\PROYECTO\git\BookstoresDW\obj\Debug\refactor.xml
+D:\UAGRM\Materia5\PROYECTO\git\BookstoresDW\obj\Debug\postdeploy.sql
+D:\UAGRM\Materia5\PROYECTO\git\BookstoresDW\obj\Debug\predeploy.sql
+D:\UAGRM\Materia5\PROYECTO\git\BookstoresDW\obj\Debug\BookstoresDW.dll
+D:\UAGRM\Materia5\PROYECTO\git\BookstoresDW\obj\Debug\BookstoresDW.pdb
