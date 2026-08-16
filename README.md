@@ -49,24 +49,7 @@ price (precio unitario)
 quantity (cantidad, normalmente 1)
 total_amount (price * quantity)
 Además, se conservan claves degeneradas order_id y line_id para trazabilidad.
-2. Mapeo de Datos desde el Origen (Bookstore) al Data Warehouse
-Tabla destino (DW)	Origen (Tablas y campos)
-dim_date	Se genera a partir de cust_order.order_date. Se extraen año, mes, día, trimestre, nombre de mes, día de semana, etc.
-dim_customer	customer.customer_id, first_name, last_name, email.
-dim_address	address.address_id, street_number, street_name, city, y country.country_name (join con country).
-dim_book	book.book_id, title, isbn13, num_pages, publication_date,
-book_language.language_name (join),
-publisher.publisher_name (join),
-y los nombres de autores concatenados desde author a través de book_author.
-fact_sales	- order_date_key: clave de dim_date a partir de cust_order.order_date.
-- customer_key: de cust_order.customer_id → dim_customer.
-- book_key: de order_line.book_id → dim_book.
-- shipping_address_key: de cust_order.dest_address_id → dim_address.
-- order_id: de cust_order.order_id.
-- line_id: de order_line.line_id.
-- price: de order_line.price.
-- quantity: se asume 1 (no hay campo cantidad en el origen, pero puede fijarse en 1).
-- total_amount: price * quantity.
+
 Proceso ETL:
 Se ejecuta una carga incremental usando los procedimientos Get...ChangesByRowVersion ya existentes en el origen, los cuales devuelven los cambios recientes. Para cada pedido, se buscan o crean las claves surrogate en las dimensiones, y se insertan las líneas en fact_sales. La dimensión fecha se llena previamente con un rango de fechas.
 
