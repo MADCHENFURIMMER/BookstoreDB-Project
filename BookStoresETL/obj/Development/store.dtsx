@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/4/2026 1:52:42 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAB46-PC36"
+  DTS:CreatorName="LAB46-PC36\JORGE N"
+  DTS:DTSID="{F7C601BD-0D31-4735-9056-86B67265B62D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="16394"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{06454FA7-FAE1-4143-A6EB-11224F4CEC5C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[source.Bookstore]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{35148F8C-67A5-4461-927C-F0800F6EBF58}"
+      DTS:ObjectName="source.Bookstore">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost\IPOS2025;User ID=sa;Initial Catalog=Bookstore;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package1-{35148F8C-67A5-4461-927C-F0800F6EBF58}LAB46-PC36\JORGE.Bookstore;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzWd25N8o0kSSu22q92nAbQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADsnc2xpNk6JZPLrg7ZePg3nx0ror3npXA+x/TuEbarWgAAAAAOgAAAAAIAACAAAAAbjV5nElweIHcpv9RbNWvSZgJtv8Q2K0uKBDmqjc8wsxAAAAB4XvyU4y4s4AVMVfFHFucKQAAAAFXB3Y7y08YJjwJ7CbmvWPB/9VCbToZIdBt+NpOuV+gdn63ngD3+cpai0lVbIvmyUBdTZp7sRd1HVEM/TKYiE98</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[target.BookstoreDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6464996A-F312-4CA8-A6C4-94BB872150D0}"
+      DTS:ObjectName="target.BookstoreDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost\IPOS2025;User ID=sa;Initial Catalog=BookstoreDW;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package1-{6464996A-F312-4CA8-A6C4-94BB872150D0}LAB46-PC36\JORGE.BookstoreDW;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzWd25N8o0kSSu22q92nAbQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAU6wys9LSlL4UIp20XTMc3SdJcJ5uMf1aSPKllcmZaHAAAAAAOgAAAAAIAACAAAABz72sZ/+gYZYkcQ/uLvz7X++Y5LnTeNw63F2yn+nlrJBAAAAAtFTOeShgPYzB7Obf3XgYZQAAAAFZTGEt21N6Ru3GbmEFNtwjrl6TcxYfW3ef3aoiZc2OqzYLNb8fe0B3ShnuwepPoQ72pIptJd9lz6y0mjsoDP2o</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{791ECD7E-BA4C-480D-8B7C-4255C84CE1D0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="dbts">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{39707892-5B3D-4374-8F82-4EB4DD19FC8F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Variable">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Get database rowversion"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{95406AE0-5AF3-4D84-94CA-BE1422A10500}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get database rowversion"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{35148F8C-67A5-4461-927C-F0800F6EBF58}"
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[GetDatabaseRowVersion]"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="DBTS"
+            SQLTask:DtsVariableName="User::dbts" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Get database rowversion"
+          TopLeft="285.833317716089,51.1333329777585" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
