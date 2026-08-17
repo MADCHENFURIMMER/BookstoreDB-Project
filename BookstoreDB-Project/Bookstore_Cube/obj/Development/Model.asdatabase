@@ -1,0 +1,475 @@
+{
+  "name": "Bookstore_Cube",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "SqlServer DESKTOP-HDF43POIPOS2025 BookstoreDW",
+        "connectionString": "Provider=SQLNCLI11;Data Source=DESKTOP-HDF43PO\\IPOS2025;Initial Catalog=BookstoreDW;User ID=sa;Persist Security Info=true",
+        "impersonationMode": "impersonateAccount",
+        "account": "MariaPC",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      },
+      {
+        "name": "SqlServer localhostIPOS2025 BookstoreDW",
+        "connectionString": "Provider=SQLNCLI11;Data Source=localhost\\IPOS2025;Initial Catalog=BookstoreDW;User ID=sa;Persist Security Info=true",
+        "impersonationMode": "impersonateAccount",
+        "account": "MariaPC",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "dim_address",
+        "columns": [
+          {
+            "name": "address_key",
+            "dataType": "int64",
+            "sourceColumn": "address_key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "address_id",
+            "dataType": "int64",
+            "sourceColumn": "address_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "street_number",
+            "dataType": "string",
+            "sourceColumn": "street_number",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "street_name",
+            "dataType": "string",
+            "sourceColumn": "street_name",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "city",
+            "dataType": "string",
+            "sourceColumn": "city",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "country_name",
+            "dataType": "string",
+            "sourceColumn": "country_name",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_address",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[dim_address].*   FROM [dbo].[dim_address] ",
+              "dataSource": "SqlServer localhostIPOS2025 BookstoreDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[dim_address].*   FROM [dbo].[dim_address] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_address"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dim_book",
+        "columns": [
+          {
+            "name": "book_key",
+            "dataType": "int64",
+            "sourceColumn": "book_key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "book_id",
+            "dataType": "int64",
+            "sourceColumn": "book_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "title",
+            "dataType": "string",
+            "sourceColumn": "title",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "isbn13",
+            "dataType": "string",
+            "sourceColumn": "isbn13",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "num_pages",
+            "dataType": "int64",
+            "sourceColumn": "num_pages",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "publication_date",
+            "dataType": "dateTime",
+            "sourceColumn": "publication_date",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "language_name",
+            "dataType": "string",
+            "sourceColumn": "language_name",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "publisher_name",
+            "dataType": "string",
+            "sourceColumn": "publisher_name",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "authors",
+            "dataType": "string",
+            "sourceColumn": "authors",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_book",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[dim_book].*   FROM [dbo].[dim_book] ",
+              "dataSource": "SqlServer localhostIPOS2025 BookstoreDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[dim_book].*   FROM [dbo].[dim_book] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_book"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dim_customer",
+        "columns": [
+          {
+            "name": "customer_key",
+            "dataType": "int64",
+            "sourceColumn": "customer_key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "customer_id",
+            "dataType": "int64",
+            "sourceColumn": "customer_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "first_name",
+            "dataType": "string",
+            "sourceColumn": "first_name",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "last_name",
+            "dataType": "string",
+            "sourceColumn": "last_name",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "email",
+            "dataType": "string",
+            "sourceColumn": "email",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_customer",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[dim_customer].*   FROM [dbo].[dim_customer] ",
+              "dataSource": "SqlServer localhostIPOS2025 BookstoreDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[dim_customer].*   FROM [dbo].[dim_customer] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_customer"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dim_date",
+        "columns": [
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "sourceColumn": "DateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FullDate",
+            "dataType": "dateTime",
+            "sourceColumn": "FullDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "DayNumberOfWeek",
+            "dataType": "int64",
+            "sourceColumn": "DayNumberOfWeek",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "DayNameOfWeek",
+            "dataType": "string",
+            "sourceColumn": "DayNameOfWeek",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "DayNumberOfMonth",
+            "dataType": "int64",
+            "sourceColumn": "DayNumberOfMonth",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "DayNumberOfYear",
+            "dataType": "int64",
+            "sourceColumn": "DayNumberOfYear",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "WeekNumberOfYear",
+            "dataType": "int64",
+            "sourceColumn": "WeekNumberOfYear",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "MonthName",
+            "dataType": "string",
+            "sourceColumn": "MonthName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "MonthNumberOfYear",
+            "dataType": "int64",
+            "sourceColumn": "MonthNumberOfYear",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "CalendarQuarter",
+            "dataType": "int64",
+            "sourceColumn": "CalendarQuarter",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "CalendarYear",
+            "dataType": "int64",
+            "sourceColumn": "CalendarYear",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "CalendarSemester",
+            "dataType": "int64",
+            "sourceColumn": "CalendarSemester",
+            "sourceProviderType": "UnsignedTinyInt"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_date",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[dim_date].*   FROM [dbo].[dim_date] ",
+              "dataSource": "SqlServer localhostIPOS2025 BookstoreDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[dim_date].*   FROM [dbo].[dim_date] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_date"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "fact_sales",
+        "columns": [
+          {
+            "name": "fact_id",
+            "dataType": "int64",
+            "sourceColumn": "fact_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "order_date_key",
+            "dataType": "int64",
+            "sourceColumn": "order_date_key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "customer_key",
+            "dataType": "int64",
+            "sourceColumn": "customer_key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "book_key",
+            "dataType": "int64",
+            "sourceColumn": "book_key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "shipping_address_key",
+            "dataType": "int64",
+            "sourceColumn": "shipping_address_key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "order_id",
+            "dataType": "int64",
+            "sourceColumn": "order_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "line_id",
+            "dataType": "int64",
+            "sourceColumn": "line_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "price",
+            "dataType": "double",
+            "sourceColumn": "price",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "quantity",
+            "dataType": "int64",
+            "sourceColumn": "quantity",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "total_amount",
+            "dataType": "double",
+            "sourceColumn": "total_amount",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fact_sales",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[fact_sales].*   FROM [dbo].[fact_sales] ",
+              "dataSource": "SqlServer localhostIPOS2025 BookstoreDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[fact_sales].*   FROM [dbo].[fact_sales] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "fact_sales"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "e85c02d0-62c2-4260-b264-05364828f7c3",
+        "fromTable": "fact_sales",
+        "fromColumn": "shipping_address_key",
+        "toTable": "dim_address",
+        "toColumn": "address_key"
+      },
+      {
+        "name": "deeb4042-a522-46b8-af03-f86901a699b4",
+        "fromTable": "fact_sales",
+        "fromColumn": "book_key",
+        "toTable": "dim_book",
+        "toColumn": "book_key"
+      },
+      {
+        "name": "43689c43-24a8-4ad0-976c-874fbc7910e6",
+        "fromTable": "fact_sales",
+        "fromColumn": "customer_key",
+        "toTable": "dim_customer",
+        "toColumn": "customer_key"
+      },
+      {
+        "name": "6c3c33ba-8d81-4f2e-a240-62f2f540b892",
+        "fromTable": "fact_sales",
+        "fromColumn": "order_date_key",
+        "toTable": "dim_date",
+        "toColumn": "DateKey"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  }
+}

@@ -3,9 +3,12 @@
     <BuildType Name="Debug" />
     <BuildType Name="Development" />
     <BuildType Name="Release" />
+    <Platform Name="Any CPU" />
+    <Platform Name="x86" />
   </Configurations>
   <Project Path="../BookstoresDW/BookstoresDW.sqlproj" Id="4e801c9d-e6d4-4071-97fc-7183c2a45b1e">
     <BuildType Solution="Development|*" Project="Release" />
+    <Platform Project="AnyCPU" />
     <Build />
     <Deploy />
   </Project>
@@ -13,8 +16,14 @@
     <BuildType Project="Development" />
     <Platform Project="?" />
   </Project>
+  <Project Path="Bookstore_Cube/Bookstore_Cube.smproj" Type="6870e480-7721-4708-bfb8-9ae898aa21b3" Id="8ce414bb-95b2-4c99-9e03-51ba72086e22">
+    <BuildType Project="Development" />
+    <Platform Project="x86" />
+    <Deploy />
+  </Project>
   <Project Path="Grupo4/Grupo4.sqlproj" Id="1cd7f9b9-0175-43b9-9366-5e0fa7a17327">
     <BuildType Solution="Development|*" Project="Release" />
+    <Platform Project="AnyCPU" />
     <Build />
     <Deploy />
   </Project>
